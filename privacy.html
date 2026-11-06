@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Mosaic Puzzle</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: #334155;
+      background: #f8fafc;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+    h1 { color: #0f172a; border-bottom: 2px solid #fbbf24; padding-bottom: 0.5rem; }
+    h2 { color: #1e293b; margin-top: 2rem; }
+    .meta { color: #64748b; font-size: 0.9rem; margin-bottom: 1.5rem; }
+    .intro { background: #fef3c7; padding: 1rem; border-left: 4px solid #fbbf24; border-radius: 0.25rem; }
+    a { color: #d97706; }
+    ul { padding-left: 1.5rem; }
+    li { margin-bottom: 0.5rem; }
+    strong { color: #1e293b; }
+    .footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #e2e8f0; color: #94a3b8; font-size: 0.85rem; }
+    .back-link { display: inline-block; margin-bottom: 1rem; color: #d97706; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <a href="/" class="back-link">← Mosaic Puzzle</a>
+  <h1>Privacy Policy</h1>
+  <p class="meta">
+    <strong>Effective date:</strong> September 16, 2026<br>
+    <strong>Last updated:</strong> September 16, 2026
+  </p>
+
+  <p class="intro">
+    This Privacy Policy describes how ildevstudio ("we", "us", or "our") collects, uses, and protects information when you use the Mosaic Puzzle mobile application ("the App"). We are committed to protecting your privacy and complying with the General Data Protection Regulation (GDPR) and the data protection laws of the Republic of Serbia.
+  </p>
+
+  <h2>1. Information We Collect</h2>
+  <p>Mosaic Puzzle is designed to minimize data collection. We collect only the information necessary to provide and improve the App experience:</p>
+  <ul>
+    <li><strong>Local data:</strong> Your puzzle progress, settings, preferences, and a randomly generated install identifier are stored locally on your device. This data is never transmitted to our servers except as described in Section 2 (Player ID Service).</li>
+    <li><strong>Player ID data:</strong> A randomly generated identifier (UUID) is sent to our server once per install to assign you a unique sequential player number (e.g., "Player1", "Player2"). See Section 2 for details.</li>
+    <li><strong>Ad data:</strong> Google AdMob may collect device identifiers and usage data to serve ads (see Section 4).</li>
+    <li><strong>Purchase data:</strong> Google Play and RevenueCat process your purchases; we receive only confirmation of the transaction (see Section 5).</li>
+    <li><strong>Game services data:</strong> If you sign in to Google Play Games, your achievements and scores are stored by Google (see Section 6).</li>
+  </ul>
+  <p><strong>We do not collect analytics data, crash reports, or any other telemetry from the App.</strong></p>
+
+  <h2>2. Player ID Service (Our Backend)</h2>
+  <p>To assign each player a unique, sequential player number (displayed as your in-app username, e.g., "Player1"), the App sends a one-time request to our backend service on first launch:</p>
+  <ul>
+    <li><strong>What is sent:</strong> A randomly generated identifier (UUID v4) created on your device. This identifier does <strong>not</strong> contain your name, email, phone number, device ID, IP address, or any other personal data. It is a random string used solely as an idempotency key.</li>
+    <li><strong>What is stored:</strong> The random identifier and the assigned sequential number, along with a timestamp of when the request was received. That is all — no other data.</li>
+    <li><strong>Where it is stored:</strong> A Cloudflare D1 database (SQLite) hosted on Cloudflare's infrastructure. The data is encrypted in transit (HTTPS) and at rest.</li>
+    <li><strong>Why it is collected:</strong> Solely to assign and remember your unique sequential player number. Without this, the App cannot know "which number you are" — no single device can determine this on its own.</li>
+    <li><strong>How often it is sent:</strong> Once per install. The App caches the assigned number locally and never re-requests it (unless you clear app data or reinstall).</li>
+    <li><strong>Retention:</strong> The identifier and number are retained for the lifetime of the App, unless you request deletion (see Section 10).</li>
+    <li><strong>Legal basis (GDPR):</strong> Our legitimate interest in operating a sequential player numbering system (Article 6(1)(f) GDPR). The data is pseudonymous (random UUID, not linked to your identity).</li>
+  </ul>
+  <p>The player ID service is hosted on Cloudflare Workers. Cloudflare may log request metadata (IP address, timestamp) for security and abuse prevention, in accordance with their privacy policy. We do not have access to Cloudflare's server logs.</p>
+
+  <h2>3. Legal Basis for Processing (GDPR)</h2>
+  <p>Under the GDPR, we process personal data on the following legal bases:</p>
+  <ul>
+    <li><strong>Consent:</strong> You consent to the collection of ad-related data by using the free version of the App. You may withdraw this consent at any time via the in-app "Privacy Options" form (available in Settings for EEA/UK users) or by purchasing the "Remove Ads" feature.</li>
+    <li><strong>Contract:</strong> Processing purchase confirmations is necessary to fulfill our contract with you when you make an in-app purchase.</li>
+    <li><strong>Legitimate interest:</strong> We have a legitimate interest in (a) displaying ads to support the free version of the App, and (b) operating a sequential player numbering system to provide a unique in-app identity (see Section 2).</li>
+  </ul>
+
+  <h2>4. Advertising (Google AdMob)</h2>
+  <p>The App uses Google AdMob to display advertisements. AdMob may collect device identifiers, IP address, and usage data to serve relevant ads. AdMob's use of data is subject to Google's Privacy Policy and applicable advertising regulations. For users in the European Economic Area (EEA) and the United Kingdom, the App uses Google's User Messaging Platform (UMP) to obtain consent for personalized advertising before any ads are requested. You can review and change your ad consent choices at any time via the "Privacy Options" form in the App's Settings screen. If you purchase the "Remove Ads" feature, no further ads will be shown and no ad-related data will be collected by AdMob through the App from that point forward.</p>
+  <p>You can learn more about how Google processes ad data at Google's Ads Settings (<a href="https://ads.google.com/home/settings">https://ads.google.com/home/settings</a>) and review Google's Privacy Policy at <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>.</p>
+
+  <h2>5. In-App Purchases (Google Play Billing &amp; RevenueCat)</h2>
+  <p>Purchase transactions are processed by Google Play Billing. We use RevenueCat, a third-party subscription and purchase management service, to verify and manage your purchases. We receive only a confirmation of your purchase (e.g., "product purchased") — we do not receive or store your payment card details, billing address, or any financial information. RevenueCat may receive your Google Play purchase token and an anonymized app user ID to process the transaction. Google handles all payment processing securely according to their own privacy and security standards. RevenueCat's privacy policy is available at <a href="https://www.revenuecat.com/privacy">https://www.revenuecat.com/privacy</a>.</p>
+
+  <h2>6. Google Play Games Services</h2>
+  <p>Signing in to Google Play Games Services is optional. When you sign in, your achievement progress and leaderboard scores are stored by Google under their privacy policy. This data includes your Google Play Games player ID and display name. You can review Google's privacy policy and revoke access at any time through your Google account settings. You can play the game fully without signing in.</p>
+
+  <h2>7. Children's Privacy</h2>
+  <p>The App is suitable for all ages. We do not knowingly collect personal information from children under 13. Our ads are configured with a "G" (General) content rating, and we have set the child-directed treatment flag in AdMob to comply with COPPA, GDPR (for children under 16 in EU member states), and other applicable child privacy regulations. If you believe a child has provided personal information, please contact us so we can take appropriate action to delete it.</p>
+
+  <h2>8. Data Retention</h2>
+  <p>Your game progress and settings are stored locally on your device and are retained until you uninstall the App or clear app data. The Player ID service (Section 2) retains your random identifier and sequential number for the lifetime of the App, unless you request deletion. Data stored by Google (AdMob, Play Billing, Play Games) and RevenueCat is retained according to their respective retention policies. If you would like us to request deletion of any data held by Google or RevenueCat on your behalf, please contact us.</p>
+
+  <h2>9. International Data Transfers</h2>
+  <p>Since we use Google services (AdMob, Play Billing, Play Games), RevenueCat, and Cloudflare, your data may be processed in countries outside the Republic of Serbia, including the United States and Ireland. Google complies with applicable data transfer frameworks (such as the EU-U.S. Data Privacy Framework). RevenueCat and Cloudflare also comply with GDPR and the EU-U.S. Data Privacy Framework. We do not transfer any data to countries outside the services provided by these third parties.</p>
+
+  <h2>10. Your Rights (GDPR and Serbian Law)</h2>
+  <p>Under the GDPR and the Serbian Law on Personal Data Protection, you have the following rights:</p>
+  <ul>
+    <li><strong>Right of access:</strong> Request a copy of the personal data we hold about you.</li>
+    <li><strong>Right to rectification:</strong> Request correction of inaccurate personal data.</li>
+    <li><strong>Right to erasure:</strong> Request deletion of your personal data ("right to be forgotten"). This includes deletion of your Player ID record from our backend.</li>
+    <li><strong>Right to restrict processing:</strong> Request that we limit the processing of your data.</li>
+    <li><strong>Right to data portability:</strong> Receive your data in a structured, machine-readable format.</li>
+    <li><strong>Right to object:</strong> Object to the processing of your data for direct marketing or other legitimate interests.</li>
+    <li><strong>Right to withdraw consent:</strong> Withdraw consent for ad-related data processing at any time via the in-app "Privacy Options" form (EEA/UK users) or by purchasing "Remove Ads."</li>
+  </ul>
+  <p>To exercise any of these rights, please contact us at <a href="mailto:ildevstudio.official@gmail.com">ildevstudio.official@gmail.com</a>. We will respond within 30 days. You also have the right to lodge a complaint with the Serbian Commissioner for Information of Public Importance and Protection of Personal Data (Poverenik za informacije od javnog značaja i zaštitu podataka o ličnosti) or your local data protection authority.</p>
+
+  <h2>11. Third-Party Services</h2>
+  <p>The App uses the following third-party services, each with their own privacy policies:</p>
+  <ul>
+    <li><strong>Google AdMob</strong> — for serving advertisements (<a href="https://support.google.com/admob/answer/6128543">https://support.google.com/admob/answer/6128543</a>)</li>
+    <li><strong>Google Play Billing</strong> — for processing in-app purchases (<a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>)</li>
+    <li><strong>Google Play Games Services</strong> — for achievements and leaderboards (optional, <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>)</li>
+    <li><strong>RevenueCat</strong> — for in-app purchase management (<a href="https://www.revenuecat.com/privacy">https://www.revenuecat.com/privacy</a>)</li>
+    <li><strong>Cloudflare</strong> — for hosting our Player ID backend service (<a href="https://www.cloudflare.com/privacypolicy/">https://www.cloudflare.com/privacypolicy/</a>)</li>
+  </ul>
+  <p>We encourage you to review their respective privacy policies for details on how they handle your data.</p>
+
+  <h2>12. Security</h2>
+  <p>We take reasonable measures to protect your data. The Player ID backend uses HTTPS for all data in transit, and the database is encrypted at rest by Cloudflare. Game data stored on your device is protected by the device's standard security features. Security of data processed by Google (AdMob, Play Billing, Play Games), RevenueCat, and Cloudflare is managed by those providers according to their security standards.</p>
+
+  <h2>13. Changes to This Policy</h2>
+  <p>We may update this Privacy Policy from time to time. Any changes will be reflected in the "Last updated" date above and will be effective immediately upon posting within the App. Continued use of the App after changes constitutes acceptance of the updated policy. We encourage you to review this policy periodically.</p>
+
+  <h2>14. Governing Law</h2>
+  <p>This Privacy Policy is governed by the laws of the Republic of Serbia and complies with the GDPR and the Serbian Law on Personal Data Protection (Zakon o zaštiti podataka o ličnosti).</p>
+
+  <h2>15. Contact</h2>
+  <p>If you have questions or concerns about this Privacy Policy, or wish to exercise your data protection rights, please contact us at: <a href="mailto:ildevstudio.official@gmail.com">ildevstudio.official@gmail.com</a></p>
+
+  <div class="footer">
+    Mosaic Puzzle — developed by ildevstudio<br>
+    Privacy Policy hosted on GitHub Pages
+  </div>
+</body>
+</html>
